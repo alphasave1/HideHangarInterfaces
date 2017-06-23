@@ -1,11 +1,18 @@
 import game
 import Keys
-from debug_utils import LOG_CURRENT_EXCEPTION '''—áŠO”­¶‰ÓŠo—Í'''
-from gui.Scaleform.daapi.view.lobby.hangar.Hangar import Hangar '''Hangar‚ğImport'''
+from debug_utils import LOG_CURRENT_EXCEPTION '''ä¾‹å¤–ç™ºç”Ÿç®‡æ‰€å‡ºåŠ›'''
+from gui.Scaleform.daapi.view.lobby.hangar.Hangar import Hangar '''Hangarã‚’Import'''
 
 hangar=None
 
-def CTRLInterfaces(): '''hangar.components“à‚É‘¶İ‚·‚é•Ï”‚Ìˆ—'''
+#hangarã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¸ã®å‚ç…§ã‚’é€€é¿
+def switchCarousels(self):
+	global hangar
+	hangar = self
+	print 'switchCarousels'
+	wg_switchCarousels(self)
+
+def CTRLInterfaces(): '''hangar.componentså†…ã«å­˜åœ¨ã™ã‚‹å¤‰æ•°ã®å‡¦ç†'''
     tankCarousel = hangar.components['tankCarousel']
     if tankCarousel:
         tankCarousel.flashObject.visible = not tankCarousel.flashObject.visible
@@ -33,16 +40,16 @@ def CTRLInterfaces(): '''hangar.components“à‚É‘¶İ‚·‚é•Ï”‚Ìˆ—'''
     questsControl = hangar.components['questsControl']
     if questsControl:
 	questsControl.flashObject.visible = not quests.flashObject.visible
-def handleKeyEvent(event): '''ƒL[ƒCƒxƒ“ƒgŒÄ‚Ño‚µ'''
+def handleKeyEvent(event): '''ã‚­ãƒ¼ã‚¤ãƒ™ãƒ³ãƒˆå‘¼ã³å‡ºã—'''
 	ret = wg_handleKeyEvent(event)
 	try:
 	    if event.isKeyDown() and not event.isRepeatedEvent():
 		if event.key == Keys.KEY_M:
 		    CTRLInterfaces()
-	except: '''‚à‚µ‚àƒGƒ‰[‚ªo‚½‚ç'''
-	    LOG_CURRENT_EXCEPTION() '''ƒƒO‚ğo—Í'''
+	except: '''ã‚‚ã—ã‚‚ã‚¨ãƒ©ãƒ¼ãŒå‡ºãŸã‚‰'''
+	    LOG_CURRENT_EXCEPTION() '''ãƒ­ã‚°ã‚’å‡ºåŠ›'''
 	return ret
 
-#ƒIƒŠƒWƒiƒ‹ƒL[ƒCƒxƒ“ƒgˆ—
+#ã‚ªãƒªã‚¸ãƒŠãƒ«ã‚­ãƒ¼ã‚¤ãƒ™ãƒ³ãƒˆå‡¦ç†
 wg_handleKeyEvent = game.handleKeyEvent
 game.handleKeyEvent = handleKeyEvent
