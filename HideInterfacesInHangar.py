@@ -123,13 +123,13 @@ Hangar._Hangar__updateVehicleInResearchPanel = switchresearch
 wg_switchammunition = Hangar._Hangar__updateVehicleInResearchPanel
 Hangar._Hangar__updateVehicleInResearchPanel = switchammunition
 
-'''tmenXpPanelの値は見つからなかったので省略'''
+#hangarのtmenXp切り替え '''tmenXpPanelの値は見つからなかったので省略'''
 wg_switchtmenXp = switchtmenXp
 
-'''questsControlの値は見つからなかったので省略'''
+#hangarのquests切り替え '''questsControlの値は見つからなかったので省略'''
 wg_switchquests = switchquests
 
-'''switchModePanelの値は見つからなかったので省略'''
+#hangarのswitchMode切り替え '''switchModePanelの値は見つからなかったので省略'''
 wg_switchswitchMode = switchswitchMode
 
 #オリジナルキーイベント処理
