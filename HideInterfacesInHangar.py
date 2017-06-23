@@ -2,6 +2,7 @@ import game
 import Keys
 from debug_utils import LOG_CURRENT_EXCEPTION '''例外発生箇所出力'''
 from gui.Scaleform.daapi.view.lobby.hangar.Hangar import Hangar '''HangarをImport'''
+from gui.mods.HideHangarInterfaces import hangar
 
 hangar = None
 
