@@ -13,6 +13,54 @@ def switchCarousels(self):
 	print 'switchCarousels'
 	wg_switchCarousels(self)
 
+def switchheader(self):
+	global hangar
+	hangar = self
+	print 'switchheader'
+	wg_switchheader(self)
+
+def switchcrew(self):
+	global hangar
+	hangar = self
+	print 'switchcrew'
+	wg_switchcrew(self)
+
+def switchparams(self):
+	global hangar
+	hangar = self
+	print 'switchparams'
+	wg_switchparams(self)
+
+def switchresearch(self):
+	global hangar
+	hangar = self
+	print 'switchresearch'
+	wg_switchresearch(self)
+
+def switchammunition(self):
+	global hangar
+	hangar = self
+	print 'switchammunition'
+	wg_switchammunition(self)
+
+def switchtmenXp(self):
+	global hangar
+	hangar = self
+	print 'switchtmenXp'
+	wg_switchtmenXp(self)
+
+def switchquests(self):
+	global hangar
+	hangar = self
+	print 'switchquests'
+	wg_switchquests(self)
+
+def switchswitchMode(self):
+	global hangar
+	hangar = self
+	print 'switchswitchMode'
+	wg_switchswitchMode(self)
+
 def CTRLInterfaces(): '''hangar.components内に存在する変数の処理'''
     tankCarousel = hangar.components['tankCarousel']
     if tankCarousel:
@@ -54,6 +102,35 @@ def handleKeyEvent(event): '''キーイベント呼び出し'''
 #hangarのcarousel切り替え
 wg_switchCarousels = Hangar._Hangar__switchCarousels
 Hangar._Hangar__switchCarousels = switchCarousels
+
+#hangarのheader切り替え
+wg_switchheader = Hangar._Hangar__updateHeader
+Hangar._Hangar__updateHeader = switchheader
+
+#hangarのcrew切り替え '''動くか怪しい'''
+wg_switchcrew = Hangar._Hangar__updateCrew
+Hangar._Hangar__updateCrew = switchcrew
+
+#hangarのparams切り替え '''動くか怪しい'''
+wg_switchparams = Hangar._Hangar__updateParams
+Hangar._Hangar__updateParams = switchparams
+
+#hangarのresearch切り替え '''動くか怪しい'''
+wg_switchresearch = Hangar._Hangar__updateVehicleInResearchPanel
+Hangar._Hangar__updateVehicleInResearchPanel = switchresearch
+
+#hangarのammunition切り替え '''動くか怪しい'''
+wg_switchammunition = Hangar._Hangar__updateVehicleInResearchPanel
+Hangar._Hangar__updateVehicleInResearchPanel = switchammunition
+
+'''tmenXpPanelの値は見つからなかったので省略'''
+wg_switchtmenXp = switchtmenXp
+
+'''questsControlの値は見つからなかったので省略'''
+wg_switchquests = switchquests
+
+'''switchModePanelの値は見つからなかったので省略'''
+wg_switchswitchMode = switchswitchMode
 
 #オリジナルキーイベント処理
 wg_handleKeyEvent = game.handleKeyEvent
