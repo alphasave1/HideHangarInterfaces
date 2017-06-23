@@ -3,7 +3,7 @@ import Keys
 from debug_utils import LOG_CURRENT_EXCEPTION '''例外発生箇所出力'''
 from gui.Scaleform.daapi.view.lobby.hangar.Hangar import Hangar '''HangarをImport'''
 
-hangar=None
+hangar = None
 
 #hangarオブジェクトへの参照を退避
 def switchCarousels(self):
@@ -49,6 +49,10 @@ def handleKeyEvent(event): '''キーイベント呼び出し'''
 	except: '''もしもエラーが出たら'''
 	    LOG_CURRENT_EXCEPTION() '''ログを出力'''
 	return ret
+
+#hangarのcarousel切り替え
+wg_switchCarousels = Hangar._Hangar__switchCarousels
+Hangar._Hangar__switchCarousels = switchCarousels
 
 #オリジナルキーイベント処理
 wg_handleKeyEvent = game.handleKeyEvent
