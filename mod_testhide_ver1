@@ -1,0 +1,12 @@
+from gui.Scaleform.daapi.view.lobby.hangar.Hangar import Hangar
+from gui.mods import mod_testhidecarousel
+from gui.mods.mod_testhidecarousel import hangar
+from gui.app_loader import g_appLoader
+from gui.Scaleform.framework import ViewTypes
+lobby=g_appLoader.getApp()
+lobbyView=lobby.containerManager.getView(ViewTypes.DEFAULT)
+lobbyHeader=lobbyView.components['lobbyHeader']
+messengerBar=lobbyView.components['messengerBar']
+messengerBar.flashObject.visible=False
+lobbyHeader.flashObject.visible=False
+hangar.flashObject.visible=False
