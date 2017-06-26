@@ -5,6 +5,8 @@ from gui.app_loader import g_appLoader
 from gui.Scaleform.daapi.view.lobby.hangar.Hangar import Hangar
 from gui.Scaleform.framework import ViewTypes
 
+hangar = None
+
 def toggleHangarUI():
     lobby = g_appLoader.getApp()
     hangar = lobby.containerManager.getView(ViewTypes.LOBBY_SUB)
