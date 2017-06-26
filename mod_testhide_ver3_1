@@ -8,6 +8,7 @@ from gui.Scaleform.framework import ViewTypes
 def toggleHangarUI():
     lobby = g_appLoader.getApp()
     hangar = lobby.containerManager.getView(ViewTypes.LOBBY_SUB)
+hangar.flashObject.visible = not hangar.flashObject.visible
 
 def handleKeyEvent(event):
     ret = wg_handleKeyEvent(event)
