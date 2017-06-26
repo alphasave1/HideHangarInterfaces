@@ -1,4 +1,5 @@
 # HideHangarInterfaces
+Cording at WoT-DebugServer-Master(Replserver)
 ## 特徴
  - ガレージ画面が表示されている状態で何らかのキーを押すと、インターフェースが非表示になる
  - もう一度キーを押すと非表示のインターフェースが表示に戻る
