@@ -16,7 +16,7 @@ def handleKeyEvent(event):
     ret = wg_handleKeyEvent(event)
     try:
         if event.isKeyDown() and not event.isRepeatedEvent():
-            if event.key == Keys.KEY_M:
+            if event.key == Keys.KEY_F11:
                 toggleHangarUI()
     except:
         LOG_CURRENT_EXCEPTION()
