@@ -4,6 +4,8 @@ Cording at WoT-DebugServer-Master(Replserver)
  - ガレージ画面が表示されている状態で何らかのキーを押すと、インターフェースが非表示になる
  - もう一度キーを押すと非表示のインターフェースが表示に戻る
 
+<b>mod_testhide_ver_3_1.py が最新のファイルです</b>
+
 ## 非表示になる(はずの)インターフェース
  - tankCarousel  
  :`tankCarousel = hangar.components['tankCarousel']`
