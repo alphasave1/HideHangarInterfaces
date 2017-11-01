@@ -27,7 +27,7 @@ Cording at WoT-DebugServer-Master(Replserver)
  :`questsControl = hangar.components['questsControl']`
  
  表示、非表示を行うキーの設定  
- :Mキー
+ :F11キー
 
 ## 考えていた案
 1.
