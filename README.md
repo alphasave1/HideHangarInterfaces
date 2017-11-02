@@ -1,5 +1,3 @@
-.. image:: https://badge.fury.io/gh/alphasave1%2FHideHangarInterfaces.svg
-    :target: https://badge.fury.io/gh/alphasave1%2FHideHangarInterfaces
 # HideHangarInterfaces
 Cording at WoT-DebugServer-Master(Replserver)
 ## 特徴
